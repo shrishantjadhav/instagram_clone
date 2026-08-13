@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Instagram Clone{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'home/css/landing.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="landing-page">
+
+```
+<!-- Navigation -->
+<nav class="landing-nav">
+
+    <div class="logo">
+        Instagram Clone
+    </div>
+
+    <div class="nav-links">
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}" class="signup-btn">Sign Up</a>
+    </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span class="tagline">CONNECT • SHARE • DISCOVER</span>
+
+        <h1>
+            Share your world.
+            <span>Connect with people.</span>
+        </h1>
+
+        <p>
+            Share photos, discover new people, and stay connected
+            with the things and people you love.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'signup' %}" class="primary-btn">
+                Create an Account
+            </a>
+
+            <a href="{% url 'login' %}" class="secondary-btn">
+                Log In
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Visual -->
+    <div class="hero-visual">
+
+        <div class="phone">
+
+            <div class="phone-header">
+                <strong>Instagram</strong>
+                <span>♡</span>
+            </div>
+
+            <div class="story-row">
+                <div class="story">+</div>
+                <div class="story"></div>
+                <div class="story"></div>
+                <div class="story"></div>
+            </div>
+
+            <div class="post">
+
+                <div class="post-header">
+                    <div class="avatar"></div>
+                    <strong>your_username</strong>
+                </div>
+
+                <div class="post-image">
+                    <span>📷</span>
+                </div>
+
+                <div class="post-actions">
+                    ♡ &nbsp; 💬 &nbsp; ↗
+                </div>
+
+                <p>
+                    <strong>your_username</strong>
+                    Sharing moments that matter.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Features -->
+<section class="features">
+
+    <div class="feature-card">
+
+        <div class="feature-icon">📸</div>
+
+        <h3>Share Moments</h3>
+
+        <p>
+            Upload and share your favorite moments with your followers.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">👥</div>
+
+        <h3>Connect</h3>
+
+        <p>
+            Follow people you care about and build your own community.
+        </p>
+
+    </div>
+
+
+    <div class="feature-card">
+
+        <div class="feature-icon">❤️</div>
+
+        <h3>Interact</h3>
+
+        <p>
+            Like, comment, and interact with posts from your community.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Call To Action -->
+<section class="cta">
+
+    <h2>Ready to share your world?</h2>
+
+    <p>
+        Create your account and start connecting today.
+    </p>
+
+    <a href="{% url 'signup' %}" class="primary-btn">
+        Get Started
+    </a>
+    <a href="{% url 'logout' %}">Log Out</a>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Instagram Clone. Built with Django.
+    </p>
+
+</footer>
+
+</div>
+
+{% endblock %}

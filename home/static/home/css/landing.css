@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: #fafafa;
+color: #262626;
+}
+
+/* =========================
+Landing Page
+========================= */
+
+.landing-page {
+min-height: 100vh;
+overflow: hidden;
+}
+
+/* =========================
+Navigation
+========================= */
+
+.landing-nav {
+height: 75px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 8%;
+
+background: white;
+border-bottom: 1px solid #e6e6e6;
+
+
+}
+
+.logo {
+font-size: 24px;
+font-weight: 700;
+letter-spacing: -0.5px;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: #262626;
+font-weight: 600;
+}
+
+.signup-btn {
+background: #0095f6;
+color: white !important;
+
+padding: 10px 20px;
+border-radius: 8px;
+
+transition: 0.2s ease;
+
+
+}
+
+.signup-btn:hover {
+background: #0077cc;
+}
+
+/* =========================
+Hero Section
+========================= */
+
+.hero {
+min-height: 620px;
+
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 70px 10%;
+
+background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fafafa 55%,
+    #f1e8ff 100%
+);
+
+
+}
+
+.hero-text {
+max-width: 600px;
+}
+
+.tagline {
+display: inline-block;
+
+margin-bottom: 20px;
+
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 2px;
+
+color: #8a3ab9;
+
+}
+
+.hero-text h1 {
+font-size: clamp(42px, 5vw, 70px);
+line-height: 1.05;
+
+margin-bottom: 25px;
+
+letter-spacing: -3px;
+
+
+}
+
+.hero-text h1 span {
+display: block;
+
+
+background: linear-gradient(
+    90deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+);
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+}
+
+.hero-text p {
+max-width: 520px;
+
+font-size: 18px;
+line-height: 1.7;
+
+color: #666;
+
+margin-bottom: 35px;
+
+
+}
+
+/* =========================
+Hero Buttons
+========================= */
+
+.hero-buttons {
+display: flex;
+gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+display: inline-block;
+
+
+padding: 13px 25px;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+font-weight: 600;
+
+transition: 0.2s ease;
+
+
+}
+
+.primary-btn {
+background: #0095f6;
+color: white;
+}
+
+.primary-btn:hover {
+background: #0077cc;
+transform: translateY(-2px);
+}
+
+.secondary-btn {
+background: white;
+color: #262626;
+
+border: 1px solid #ddd;
+
+}
+
+.secondary-btn:hover {
+background: #f2f2f2;
+}
+
+/* =========================
+Phone Mockup
+========================= */
+
+.hero-visual {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.phone {
+width: 300px;
+min-height: 550px;
+
+background: white;
+
+border: 8px solid #222;
+border-radius: 35px;
+
+box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.18);
+
+overflow: hidden;
+
+transform: rotate(3deg);
+
+transition: 0.4s ease;
+
+
+}
+
+.phone:hover {
+transform: rotate(0deg) translateY(-8px);
+}
+
+/* Phone Header */
+
+.phone-header {
+height: 55px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 15px;
+
+border-bottom: 1px solid #eee;
+
+font-size: 16px;
+
+}
+
+/* =========================
+Stories
+========================= */
+
+.story-row {
+display: flex;
+gap: 12px;
+
+padding: 15px;
+
+border-bottom: 1px solid #eee;
+
+}
+
+.story {
+width: 48px;
+height: 48px;
+
+border-radius: 50%;
+
+border: 3px solid #d6249f;
+
+background: #f3f3f3;
+
+}
+
+.story:first-child {
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 2px solid #ddd;
+
+font-size: 25px;
+color: #555;
+
+}
+
+/* =========================
+Post
+========================= */
+
+.post {
+padding-bottom: 15px;
+}
+
+.post-header {
+display: flex;
+align-items: center;
+gap: 10px;
+
+padding: 12px 15px;
+
+}
+
+.avatar {
+width: 35px;
+height: 35px;
+
+border-radius: 50%;
+
+background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+);
+
+
+}
+
+.post-image {
+height: 250px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+);
+
+font-size: 50px;
+
+
+}
+
+.post-actions {
+padding: 12px 15px;
+
+font-size: 22px;
+}
+
+.post p {
+padding: 0 15px;
+
+font-size: 14px;
+line-height: 1.5;
+
+}
+
+/* =========================
+Features
+========================= */
+
+.features {
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+
+padding: 80px 10%;
+
+background: white;
+
+}
+
+.feature-card {
+padding: 35px 30px;
+
+text-align: center;
+
+border: 1px solid #e5e5e5;
+
+border-radius: 15px;
+
+background: white;
+
+transition: 0.25s ease;
+
+}
+
+.feature-card:hover {
+transform: translateY(-6px);
+
+box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
+
+}
+
+.feature-icon {
+font-size: 35px;
+
+margin-bottom: 18px;
+
+}
+
+.feature-card h3 {
+font-size: 21px;
+
+margin-bottom: 12px;
+
+}
+
+.feature-card p {
+color: #777;
+
+line-height: 1.6;
+
+
+}
+
+/* =========================
+Call To Action
+========================= */
+
+.cta {
+text-align: center;
+
+
+padding: 90px 20px;
+
+background: #fafafa;
+
+}
+
+.cta h2 {
+font-size: 38px;
+
+
+margin-bottom: 15px;
+
+}
+
+.cta p {
+color: #777;
+
+
+margin-bottom: 25px;
+
+font-size: 17px;
+
+}
+
+/* =========================
+Footer
+========================= */
+
+footer {
+padding: 25px;
+
+
+text-align: center;
+
+border-top: 1px solid #e5e5e5;
+
+background: white;
+
+color: #888;
+
+font-size: 14px;
+
+
+}
+
+/* =========================
+Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+.hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 60px;
+
+    padding: 60px 6%;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.features {
+    grid-template-columns: 1fr;
+
+    padding: 60px 8%;
+}
+
+.phone {
+    width: 280px;
+}
+
+}
+
+@media (max-width: 600px) {
+
+
+.landing-nav {
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.nav-links {
+    gap: 12px;
+}
+
+.nav-links a:first-child {
+    display: none;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+}
+
+.primary-btn,
+.secondary-btn {
+    width: 100%;
+    text-align: center;
+}
+
+}
