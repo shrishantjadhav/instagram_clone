@@ -27,6 +27,9 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("profiles/", include("profiles.urls")),
     path("posts/", include("posts.urls")),
+    path('fyp/', include("fyp.urls")),
+    path('search/', include("search.urls")),
+    path('inbox/', include("inbox.urls")),
     
 ]
 

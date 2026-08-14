@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Inbox | Instagram Clone
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'inbox/css/inbox.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="inbox-page">
+
+    <div class="inbox-container">
+
+        <!-- Inbox Header -->
+
+        <header class="inbox-header">
+
+            <div>
+                <h1>Messages</h1>
+                <p>Your conversations</p>
+            </div>
+
+            <button class="new-message-btn">
+                ✎
+            </button>
+
+        </header>
+
+
+        <!-- Search Conversations -->
+
+        <div class="message-search">
+
+            <input
+                type="text"
+                placeholder="Search messages..."
+            >
+
+        </div>
+
+
+        <!-- Conversations -->
+
+        <main class="conversations">
+
+            <!-- Example conversation -->
+
+            <div class="conversation">
+
+                <div class="conversation-avatar">
+                    R
+                </div>
+
+                <div class="conversation-info">
+
+                    <strong>rahul</strong>
+
+                    <p>
+                        Hey! How are you?
+                    </p>
+
+                </div>
+
+                <small>
+                    10:30 PM
+                </small>
+
+            </div>
+
+
+            <!-- Example conversation -->
+
+            <div class="conversation">
+
+                <div class="conversation-avatar">
+                    A
+                </div>
+
+                <div class="conversation-info">
+
+                    <strong>amit</strong>
+
+                    <p>
+                        Check out this post!
+                    </p>
+
+                </div>
+
+                <small>
+                    Yesterday
+                </small>
+
+            </div>
+
+
+            <!-- Empty state -->
+
+            <!--
+            <div class="empty-inbox">
+
+                <div class="empty-icon">
+                    💬
+                </div>
+
+                <h2>No messages yet</h2>
+
+                <p>
+                    Start a conversation with someone.
+                </p>
+
+            </div>
+            -->
+
+        </main>
+
+    </div>
+
+</div>
+
+{% endblock %}

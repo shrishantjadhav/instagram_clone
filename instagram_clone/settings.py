@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'profiles',
     'posts',
     'home',
+    'fyp',
+    'inbox',
+    'search',
 ]
 
 MIDDLEWARE = [

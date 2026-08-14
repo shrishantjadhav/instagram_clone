@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Search | Instagram Clone
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'search/css/search.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="search-page">
+
+    <div class="search-container">
+
+        <header class="search-header">
+
+            <h1>Search</h1>
+
+            <p>Find people on Instagram Clone</p>
+
+        </header>
+
+
+        <!-- Search Form -->
+
+        <form method="GET" action="{% url 'search' %}" class="search-form">
+
+            <input
+                type="text"
+                name="q"
+                value="{{ query }}"
+                placeholder="Search users..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <!-- Search Results -->
+
+        {% if query %}
+
+            <div class="results-header">
+
+                <h2>
+                    Results for "{{ query }}"
+                </h2>
+
+            </div>
+
+
+            {% for user in users %}
+
+                <div class="user-result">
+
+                    <div class="user-avatar">
+                        {{ user.username|first|upper }}
+                    </div>
+
+                    <div class="user-details">
+
+                        <a href="#">
+                            {{ user.username }}
+                        </a>
+
+                        {% if user.first_name or user.last_name %}
+
+                            <p>
+                                {{ user.first_name }}
+                                {{ user.last_name }}
+                            </p>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <div class="no-results">
+
+                    <h3>No users found</h3>
+
+                    <p>
+                        Try searching with a different username.
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

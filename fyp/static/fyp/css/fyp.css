@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+
+/* Main FYP container */
+
+.fyp-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+
+/* FYP Header */
+
+.fyp-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.fyp-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.fyp-header p {
+    margin-top: 8px;
+    color: #777;
+}
+
+
+/* Feed */
+
+.feed {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Post Card */
+
+.post-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+
+/* Post Header */
+
+.post-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Profile placeholder */
+
+.profile-placeholder {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #222;
+    color: white;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Username and date */
+
+.user-info strong {
+    display: block;
+    font-size: 15px;
+}
+
+.user-info small {
+    display: block;
+    margin-top: 3px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* Image */
+
+.post-image-container {
+    width: 100%;
+    background: #000;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+
+    max-height: 700px;
+
+    object-fit: contain;
+}
+
+
+/* Post content */
+
+.post-content {
+    padding: 14px 16px;
+}
+
+
+/* Action buttons */
+
+.post-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.action-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.action-btn:hover {
+    opacity: 0.6;
+}
+
+
+/* Caption */
+
+.caption {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.caption strong {
+    margin-right: 5px;
+}
+
+
+/* Date */
+
+.post-date {
+    display: block;
+    margin-top: 10px;
+    color: #999;
+    font-size: 12px;
+}
+
+
+/* Empty feed */
+
+.empty-feed {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.empty-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.empty-feed h2 {
+    margin: 0;
+}
+
+.empty-feed p {
+    color: #777;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .fyp-page {
+        padding: 20px 8px;
+    }
+
+    .fyp-header h1 {
+        font-size: 26px;
+    }
+
+    .post-card {
+        border-radius: 8px;
+    }
+
+    .post-image {
+        max-height: 500px;
+    }
+
+}

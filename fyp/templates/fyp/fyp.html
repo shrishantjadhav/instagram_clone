@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    FYP | Instagram Clone
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'fyp/css/fyp.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="fyp-page">
+
+    <header class="fyp-header">
+        <h1>For You</h1>
+        <p>Discover posts from the community</p>
+    </header>
+
+    <main class="feed">
+
+        {% for post in posts %}
+
+            <article class="post-card">
+
+                <!-- Post Header -->
+                <div class="post-header">
+
+                    <div class="user-info">
+                        <div class="profile-placeholder">
+                            {{ post.user.username|first|upper }}
+                        </div>
+
+                        <div>
+                            <strong>{{ post.user.username }}</strong>
+                            <small>
+                                {{ post.created_at|date:"M d, Y" }}
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Post Image -->
+                <div class="post-image-container">
+
+                    <img
+                        src="{{ post.image.url }}"
+                        alt="Post by {{ post.user.username }}"
+                        class="post-image"
+                    >
+
+                </div>
+
+
+                <!-- Post Content -->
+                <div class="post-content">
+
+                    <div class="post-actions">
+
+                        <button type="button" class="action-btn">
+                            ♡
+                        </button>
+
+                        <button type="button" class="action-btn">
+                            💬
+                        </button>
+
+                        <button type="button" class="action-btn">
+                            ↗
+                        </button>
+
+                    </div>
+
+                    <p class="caption">
+                        <strong>{{ post.user.username }}</strong>
+                        {{ post.caption }}
+                    </p>
+
+                    <small class="post-date">
+                        {{ post.created_at|date:"F d, Y" }}
+                    </small>
+
+                </div>
+
+            </article>
+
+        {% empty %}
+
+            <div class="empty-feed">
+
+                <div class="empty-icon">
+                    📷
+                </div>
+
+                <h2>No posts yet</h2>
+
+                <p>
+                    There are no posts to show right now.
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+    </main>
+
+</div>
+
+{% endblock %}
