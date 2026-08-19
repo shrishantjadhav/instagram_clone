@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+    {{ profile_user.username }} | Instagram Clone
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'profiles/css/profile_page.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="profile-page">
+
+    <div class="profile-header">
+
+        <div class="profile-avatar">
+            {{ profile_user.username|first|upper }}
+        </div>
+
+        <div class="profile-info">
+
+            <h1>
+                {{ profile_user.username }}
+            </h1>
+
+            {% if profile_user.first_name or profile_user.last_name %}
+                <p>
+                    {{ profile_user.first_name }}
+                    {{ profile_user.last_name }}
+                </p>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

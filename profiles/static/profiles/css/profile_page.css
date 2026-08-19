@@ -1,0 +1,41 @@
+.profile-page {
+    width: 900px;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #222;
+    color: white;
+
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.profile-info p {
+    color: #777;
+}
