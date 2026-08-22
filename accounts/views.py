@@ -18,7 +18,7 @@ def signup(request):
                 "Account created successfully!"
             )
         
-            return redirect('login')
+            return redirect('home')
             
     else:
         form = SignupForm()
@@ -28,4 +28,4 @@ def signup(request):
 def logout_view(request):
     logout(request)
     
-    return redirect("home")
+    return redirect("index")

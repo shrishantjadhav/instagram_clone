@@ -8,7 +8,10 @@
 
 {% block extra_css %}
 
-<link rel="stylesheet" href="{% static 'profiles/css/profile_page.css' %}">
+<link
+    rel="stylesheet"
+    href="{% static 'profiles/css/profile_page.css' %}"
+>
 
 {% endblock %}
 
@@ -16,11 +19,18 @@
 
 <div class="profile-page">
 
-    <div class="profile-header">
+    <!-- Profile Header -->
+
+    <section class="profile-header">
+
+        <!-- Profile Avatar -->
 
         <div class="profile-avatar">
             {{ profile_user.username|first|upper }}
         </div>
+
+
+        <!-- Profile Information -->
 
         <div class="profile-info">
 
@@ -28,16 +38,104 @@
                 {{ profile_user.username }}
             </h1>
 
+
             {% if profile_user.first_name or profile_user.last_name %}
-                <p>
+
+                <p class="profile-name">
                     {{ profile_user.first_name }}
                     {{ profile_user.last_name }}
                 </p>
+
             {% endif %}
+
+
+            <!-- Profile Statistics -->
+
+            <div class="profile-stats">
+
+                <div class="profile-stat">
+
+                    <span>Posts</span>
+
+                    <strong>
+                        {{ posts|length }}
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <span>Followers</span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <span>Following</span>
+
+                    <strong>
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- Posts Section -->
+
+    <section class="profile-posts">
+
+        <h2>Posts</h2>
+
+
+        {% if posts %}
+
+            <div class="posts-grid">
+
+                {% for post in posts %}
+
+                    <div class="profile-post">
+
+                        <img
+                            src="{{ post.image.url }}"
+                            alt="Post by {{ profile_user.username }}"
+                        >
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        {% else %}
+
+            <div class="no-posts">
+
+                <h3>
+                    No posts yet
+                </h3>
+
+                <p>
+                    {{ profile_user.username }} hasn't posted anything yet.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </section>
 
 </div>
 
